@@ -31,9 +31,9 @@ export default function Home() {
 
         <div className="mt-6 text-lg">
           <p className="text-muted-foreground">
-            I build at the intersection of technology, business, and design.
+            Building at the intersection of technology, business, and design.
             <br />
-            <span className="text-muted-foreground">Always building. Always learning.</span>
+            <span className="text-muted-foreground">Always learning.</span>
           </p>
         </div>
 
