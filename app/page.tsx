@@ -79,7 +79,7 @@ export default function Home() {
         </div>
 
         <div className="mt-20 w-full max-w-2xl">
-          <h2 className="text-xl font-semibold mb-6 text-center">Projects</h2>
+          <h4 className="text-md font-semibold mb-6 text-left">Projects</h4>
           <div className="space-y-3 text-left">
             {projects.map((project, index) => (
               <Link
