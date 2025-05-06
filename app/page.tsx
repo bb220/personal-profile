@@ -8,6 +8,11 @@ export default function Home() {
   // Replace with your actual social links
   const socialLinks = [
     {
+      name: "LinkedIn",
+      url: "https://www.linkedin.com/in/brandon-bellero/",
+      icon: <Linkedin className="h-5 w-5" />,
+    },
+    {
       name: "GitHub",
       url: "https://github.com/bb220",
       icon: <Github className="h-5 w-5" />,
@@ -17,10 +22,30 @@ export default function Home() {
       url: "https://brandonbellero.substack.com/",
       icon: <BookOpen className="h-5 w-5" />,
     },
+  ]
+
+  // Replace with your actual projects
+  const projects = [
     {
-      name: "LinkedIn",
-      url: "https://www.linkedin.com/in/brandon-bellero/",
-      icon: <Linkedin className="h-5 w-5" />,
+      title: "Launcher",
+      description:
+        "A lean, secure, and easily extendable user service for technical founders who want to move fast and build products.",
+      url: "https://github.com/bb220/launcher-userservice",
+    },
+    {
+      title: "My Easy Golf Scorecard",
+      description: "A simple scorecard app that eliminates distractions so you can enjoy your round.",
+      url: "https://myeasygolfscorecard.com/",
+    },
+    {
+      title: "The Verrazzano is Cool Too",
+      description: "An apparel brand for New York City's most underrated bridge.",
+      url: "https://www.theverrazzanoiscooltoo.com/",
+    },
+    {
+      title: "Clean Calculator",
+      description: "A calculator app for Chrome OS.",
+      url: "https://chromewebstore.google.com/detail/clean-calculator-extensio/bmhlkhlncmgcdeicfehhpifjhgneenoc",
     },
   ]
 
@@ -51,6 +76,27 @@ export default function Home() {
               <span>{link.name}</span>
             </Link>
           ))}
+        </div>
+
+        <div className="mt-20 w-full max-w-2xl">
+          <h2 className="text-xl font-semibold mb-6 text-center">Projects</h2>
+          <div className="space-y-3 text-left">
+            {projects.map((project, index) => (
+              <Link
+                key={index}
+                href={project.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block py-1 transition-colors hover:bg-muted/10"
+              >
+                <div className="text-sm">
+                  <span className="font-medium">{project.title}</span>
+                  <span className="mx-2 text-muted-foreground">—</span>
+                  <span className="text-muted-foreground">{project.description}</span>
+                </div>
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
     </main>
