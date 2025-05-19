@@ -27,9 +27,9 @@ export default function Home() {
   // Replace with your actual projects
   const projects = [
     {
-      title: "Launcher",
+      title: "Launcher (work in progress)",
       description:
-        "A lean, secure, and easily extendable user service for technical founders who want to move fast and build products.",
+        "A lean, secure, and easily extendable platform for technical founders who want to move fast and build products.",
       url: "https://github.com/bb220/launcher-userservice",
     },
     {
@@ -39,7 +39,7 @@ export default function Home() {
     },
     {
       title: "The Verrazzano is Cool Too",
-      description: "An apparel brand for New York City's most underrated bridge.",
+      description: "What started as a joke turned into an automated DTC brand inspired by New York City's most underrated bridge.",
       url: "https://www.theverrazzanoiscooltoo.com/",
     },
     {
@@ -79,7 +79,7 @@ export default function Home() {
         </div>
 
         <div className="mt-20 w-full max-w-2xl">
-          <h4 className="text-md font-semibold mb-6 text-left">Projects</h4>
+          <h4 className="text-md font-semibold mb-6 text-left">Things I've Built</h4>
           <div className="space-y-3 text-left">
             {projects.map((project, index) => (
               <Link
