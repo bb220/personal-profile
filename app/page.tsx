@@ -38,10 +38,10 @@ export default function Home() {
   // Replace with your actual projects
   const projects = [
     {
-      title: "Launcher (work in progress)",
+      title: "Launcher",
       description:
         "A lean, secure, and easily extendable platform for technical founders who want to move fast and build products.",
-      url: "https://github.com/bb220/launcher-userservice",
+      url: "https://v0-launcher-home.vercel.app/",
     },
     {
       title: "My Easy Golf Scorecard",
