@@ -40,7 +40,7 @@ export default function Home() {
     {
       title: "Launcher",
       description:
-        "A lean, secure, and easily extendable platform for technical founders who want to move fast and build products.",
+        "A secure and easily extendable platform for technical founders who want to move fast and build products.",
       url: "https://v0-launcher-home.vercel.app/",
     },
     {
