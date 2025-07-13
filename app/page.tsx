@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Github, Linkedin, BookOpen } from "lucide-react"
+import { Github, Linkedin } from "lucide-react"
 
 const XIcon = ({ className }: { className?: string }) => (
   <svg viewBox="0 0 24 24" className={className} fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -28,19 +28,13 @@ export default function Home() {
       url: "https://github.com/bb220",
       icon: <Github className="h-5 w-5" />,
     },
-    {
-      name: "Substack",
-      url: "https://brandonbellero.substack.com/",
-      icon: <BookOpen className="h-5 w-5" />,
-    }
   ]
 
   // Replace with your actual projects
   const projects = [
     {
       title: "Launcher",
-      description:
-        "A lightweight platform starter-kit for technical founders.",
+      description: "A lightweight platform starter-kit for technical founders.",
       url: "https://v0-launcher-home.vercel.app/",
     },
     {
