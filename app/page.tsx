@@ -33,11 +33,6 @@ export default function Home() {
   // Replace with your actual projects
   const projects = [
     {
-      title: "Launcher",
-      description: "A lightweight platform starter-kit for technical founders.",
-      url: "https://v0-launcher-home.vercel.app/",
-    },
-    {
       title: "My Easy Golf Scorecard",
       description: "A simple scorecard app that eliminates distractions so you can enjoy your round.",
       url: "https://myeasygolfscorecard.com/",
