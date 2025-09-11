@@ -33,6 +33,11 @@ export default function Home() {
   // Replace with your actual projects
   const projects = [
     {
+      title: "CoachAI",
+      description: "An agentic AI application that provides personalized fitness training.",
+      url: "https://www.coachaiapp.info/",
+    },
+    {
       title: "My Easy Golf Scorecard",
       description: "A simple scorecard app that eliminates distractions so you can enjoy your round.",
       url: "https://myeasygolfscorecard.com/",
