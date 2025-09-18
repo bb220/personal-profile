@@ -63,8 +63,8 @@ const Home = () => {
                 href={link.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block py-1 text-sm transition-colors hover:bg-muted/10 text-left"
-                style={{ color: "#0033FF" }}
+                className="block py-1 text-sm font-medium transition-colors hover:bg-muted/10 text-left"
+                style={{ color: "#3E7FE9" }}
                 aria-label={link.name}
               >
                 <span>{link.name}</span>
@@ -85,7 +85,7 @@ const Home = () => {
                 className="block py-1 transition-colors hover:bg-muted/10"
               >
                 <div className="text-sm">
-                  <span className="font-medium" style={{ color: "#0033FF" }}>
+                  <span className="font-medium" style={{ color: "#3E7FE9" }}>
                     {project.title}
                   </span>
                   <span className="mx-2 text-muted-foreground">—</span>
