@@ -62,9 +62,7 @@ export default function Home() {
 
         <div className="mt-6 text-lg">
           <p className="text-muted-foreground">
-            Building at the intersection of technology, business, and design.
-            <br />
-            <span className="text-muted-foreground">Always learning.</span>
+            Dream &rarr; Build &rarr; Learn
           </p>
         </div>
 
