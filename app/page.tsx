@@ -54,7 +54,7 @@ const Home = () => {
           <p className="text-muted-foreground">Dream &rarr; Build &rarr; Learn</p>
         </div>
 
-        <div className="mt-10 w-full max-w-2xl">
+        <div className="mt-20 w-full max-w-2xl">
           <h4 className="text-md font-semibold mb-6 text-left">Let's Connect</h4>
           <div className="flex flex-col gap-1 mb-12">
             {socialLinks.map((link) => (
