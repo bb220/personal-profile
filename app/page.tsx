@@ -1,13 +1,6 @@
 import Link from "next/link"
-import { Github, Linkedin } from "lucide-react"
 
-const XIcon = ({ className }: { className?: string }) => (
-  <svg viewBox="0 0 24 24" className={className} fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-  </svg>
-)
-
-export default function Home() {
+const Home = () => {
   // Replace with your actual name
   const name = "Brandon Bellero"
 
@@ -16,17 +9,14 @@ export default function Home() {
     {
       name: "LinkedIn",
       url: "https://www.linkedin.com/in/brandon-bellero/",
-      icon: <Linkedin className="h-5 w-5" />,
     },
     {
       name: "X",
       url: "https://x.com/brandonbellero",
-      icon: <XIcon className="h-5 w-5" />,
     },
     {
       name: "GitHub",
       url: "https://github.com/bb220",
-      icon: <Github className="h-5 w-5" />,
     },
   ]
 
@@ -61,28 +51,29 @@ export default function Home() {
         <h1 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">{name}</h1>
 
         <div className="mt-6 text-lg">
-          <p className="text-muted-foreground">
-            Dream &rarr; Build &rarr; Learn
-          </p>
+          <p className="text-muted-foreground">Dream &rarr; Build &rarr; Learn</p>
         </div>
 
-        <div className="mt-10 flex flex-row justify-center gap-2 sm:gap-4">
-          {socialLinks.map((link) => (
-            <Link
-              key={link.name}
-              href={link.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-1 sm:gap-2 rounded-md px-2 py-1 sm:px-3 sm:py-2 text-xs sm:text-sm text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
-              aria-label={link.name}
-            >
-              {link.icon}
-              <span>{link.name}</span>
-            </Link>
-          ))}
+        <div className="mt-10 w-full max-w-2xl">
+          <h4 className="text-md font-semibold mb-6 text-left">Let's Connect</h4>
+          <div className="flex flex-col gap-1 mb-12">
+            {socialLinks.map((link) => (
+              <Link
+                key={link.name}
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block py-1 text-sm transition-colors hover:bg-muted/10 text-left"
+                style={{ color: "#0033FF" }}
+                aria-label={link.name}
+              >
+                <span>{link.name}</span>
+              </Link>
+            ))}
+          </div>
         </div>
 
-        <div className="mt-20 w-full max-w-2xl">
+        <div className="w-full max-w-2xl">
           <h4 className="text-md font-semibold mb-6 text-left">Things I've Built</h4>
           <div className="space-y-3 text-left">
             {projects.map((project, index) => (
@@ -94,7 +85,9 @@ export default function Home() {
                 className="block py-1 transition-colors hover:bg-muted/10"
               >
                 <div className="text-sm">
-                  <span className="font-medium">{project.title}</span>
+                  <span className="font-medium" style={{ color: "#0033FF" }}>
+                    {project.title}
+                  </span>
                   <span className="mx-2 text-muted-foreground">—</span>
                   <span className="text-muted-foreground">{project.description}</span>
                 </div>
@@ -106,3 +99,5 @@ export default function Home() {
     </main>
   )
 }
+
+export default Home
