@@ -1,103 +1,119 @@
 import Link from "next/link"
 
-const Home = () => {
-  // Replace with your actual name
-  const name = "Brandon Bellero"
-
-  // Replace with your actual social links
-  const socialLinks = [
-    {
-      name: "LinkedIn",
-      url: "https://www.linkedin.com/in/brandon-bellero/",
-    },
-    {
-      name: "X",
-      url: "https://x.com/brandonbellero",
-    },
-    {
-      name: "GitHub",
-      url: "https://github.com/bb220",
-    },
-  ]
-
-  // Replace with your actual projects
+export default function Home() {
   const projects = [
     {
       title: "CoachAI",
-      description: "An agentic AI app that provides personalized fitness training.",
-      url: "https://www.coachaiapp.info/",
+      description:
+        "A fitness app with an agentic AI that builds programs, provides personal training, and logs workouts. Built on LangGraph with a long‑term data store.",
+      url: "https://www.coachaiapp.info",
+      linkText: "Visit CoachAI",
     },
     {
       title: "My Easy Golf Scorecard",
-      description: "A simple scorecard app that eliminates distractions so you can enjoy your round.",
-      url: "https://myeasygolfscorecard.com/",
+      description: "An Apple Watch-centered scorecard that eliminates distractions so you can enjoy your round.",
+      url: "https://myeasygolfscorecard.com",
+      linkText: "See the app",
     },
     {
-      title: "The Verrazzano is Cool Too",
-      description:
-        "What started as a joke turned into an automated DTC brand inspired by New York City's most underrated bridge.",
-      url: "https://www.theverrazzanoiscooltoo.com/",
+      title: "The Verrazzano Is Cool Too",
+      description: "A design‑led, automated DTC apparel project inspired by New York City's most underrated bridge.",
+      url: "https://www.theverrazzanoiscooltoo.com",
+      linkText: "Browse the shop",
     },
     {
       title: "Clean Calculator",
-      description: "A calculator app for Chrome OS.",
+      description: "A minimal calculator for ChromeOS: simple and legible.",
       url: "https://chromewebstore.google.com/detail/clean-calculator-extensio/bmhlkhlncmgcdeicfehhpifjhgneenoc",
+      linkText: "Learn more",
     },
   ]
 
+  const writing = [
+    {
+      title: "What is an API?",
+      description: "The familiar concept at the center of our software‑powered world.",
+      url: "https://substack.com/home/post/p-142761730",
+      linkText: "Read the post",
+    },
+  ]
+
+  const socialLinks = [
+    { name: "LinkedIn", url: "https://www.linkedin.com/in/brandon-bellero/" },
+    { name: "X", url: "https://x.com/brandonbellero" },
+    { name: "GitHub", url: "https://github.com/bb220" },
+  ]
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-6 md:p-24">
-      <div className="max-w-2xl text-center">
-        <h1 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">{name}</h1>
-
-        <div className="mt-6 text-lg">
-          <p className="text-muted-foreground">Dream &rarr; Build &rarr; Learn</p>
-        </div>
-
-        <div className="mt-20 w-full max-w-2xl">
-          <h4 className="text-md font-semibold mb-6 text-left">Let's Connect</h4>
-          <div className="flex flex-col gap-1 mb-12">
-            {socialLinks.map((link) => (
-              <Link
-                key={link.name}
-                href={link.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block py-1 text-sm font-medium transition-colors hover:bg-muted/10 text-left"
-                style={{ color: "#3E7FE9" }}
-                aria-label={link.name}
-              >
-                <span>{link.name}</span>
-              </Link>
-            ))}
-          </div>
-        </div>
-
-        <div className="w-full max-w-2xl">
-          <h4 className="text-md font-semibold mb-6 text-left">Things I've Built</h4>
-          <div className="space-y-3 text-left">
-            {projects.map((project, index) => (
-              <Link
-                key={index}
-                href={project.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block py-1 transition-colors hover:bg-muted/10"
-              >
-                <div className="text-sm">
-                  <span className="font-medium" style={{ color: "#3E7FE9" }}>
-                    {project.title}
-                  </span>
-                  <span className="mx-2 text-muted-foreground">—</span>
-                  <span className="text-muted-foreground">{project.description}</span>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
+    <main className="main">
+      {/* I. Note from the Author */}
+      <div className="center">
+        <div className="roman">I</div>
+        <div className="chapter">A Note from the Author</div>
       </div>
+      <p className="lead dropcap">
+        Dream, build, learn. I'm a product manager with a background in software engineering. This page gathers my
+        projects and writing. If you're building something ambitious, say hello on{" "}
+        {socialLinks.map((link, i) => (
+          <span key={link.name}>
+            <Link href={link.url} target="_blank" rel="noopener">
+              {link.name}
+            </Link>
+            {i < socialLinks.length - 1 && (i === socialLinks.length - 2 ? ", or " : ", ")}
+          </span>
+        ))}
+        .
+      </p>
+
+      {/* II. Projects */}
+      <section>
+        <div className="center">
+          <div className="roman">II</div>
+          <div className="chapter">Projects</div>
+        </div>
+
+        {projects.map((project, index) => (
+          <div key={index} className="project">
+            <div className="rule">
+              {index + 1}. <span className="head">{project.title}</span>
+            </div>
+            <p>
+              {project.description}{" "}
+              <Link href={project.url} target="_blank" rel="noopener">
+                {project.linkText}
+              </Link>
+              .
+            </p>
+          </div>
+        ))}
+      </section>
+
+      {/* III. Writing */}
+      <section>
+        <div className="center">
+          <div className="roman">III</div>
+          <div className="chapter">Writing</div>
+        </div>
+        {writing.map((article, index) => (
+          <div key={index} className="project">
+            <div className="rule">
+              {index + 1}. <span className="head">{article.title}</span>
+            </div>
+            <p>
+              {article.description}{" "}
+              <Link href={article.url} target="_blank" rel="noopener">
+                {article.linkText}
+              </Link>
+              .
+            </p>
+          </div>
+        ))}
+      </section>
+
+      <hr />
+      <p className="center" style={{ opacity: 0.7, textIndent: 0, marginTop: "1.25rem" }}>
+        © {new Date().getFullYear()} Brandon Bellero
+      </p>
     </main>
   )
 }
-
-export default Home
