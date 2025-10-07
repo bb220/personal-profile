@@ -52,8 +52,7 @@ export default function Home() {
         <div className="chapter">A Note from the Author</div>
       </div>
       <p className="lead dropcap">
-        Dream, build, learn. I'm a product manager with a background in software engineering. This page gathers my
-        projects and writing. If you're building something ambitious, say hello on{" "}
+        Welcome. I'm a product manager with a software engineering background. This page lists my personal projects and writing. If you're building something ambitious, say hello on{" "}
         {socialLinks.map((link, i) => (
           <span key={link.name}>
             <Link href={link.url} target="_blank" rel="noopener">
