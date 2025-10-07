@@ -5,13 +5,13 @@ export default function Home() {
     {
       title: "CoachAI",
       description:
-        "A fitness app with an agentic AI that builds programs, provides personal training, and logs workouts. Built on LangGraph with a long‑term data store.",
+        "A fitness app with an agentic AI that builds programs, provides personal training, and logs workouts.",
       url: "https://www.coachaiapp.info",
       linkText: "Try it out",
     },
     {
       title: "My Easy Golf Scorecard",
-      description: "An Apple Watch-centered scorecard that eliminates distractions so you can enjoy your round.",
+      description: "A simple scorecard app that eliminates distractions so you can enjoy your round.",
       url: "https://myeasygolfscorecard.com",
       linkText: "See the app",
     },
@@ -23,7 +23,7 @@ export default function Home() {
     },
     {
       title: "Clean Calculator",
-      description: "A minimal calculator for ChromeOS: simple and practical.",
+      description: "A minimal calculator extension for Chrome.",
       url: "https://chromewebstore.google.com/detail/clean-calculator-extensio/bmhlkhlncmgcdeicfehhpifjhgneenoc",
       linkText: "Learn more",
     },
@@ -52,7 +52,7 @@ export default function Home() {
         <div className="chapter">A Note from the Author</div>
       </div>
       <p className="lead dropcap">
-        Welcome. I'm a product manager with a software engineering background. This page lists my personal projects and writing. If you're building something ambitious, say hello on{" "}
+        Welcome. I'm a product manager with a software engineering background. This page lists my personal projects and writing. If something sparks your curiosity, say hello on{" "}
         {socialLinks.map((link, i) => (
           <span key={link.name}>
             <Link href={link.url} target="_blank" rel="noopener">

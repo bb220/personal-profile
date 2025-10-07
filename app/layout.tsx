@@ -6,7 +6,7 @@ import "./globals.css"
 
 export const metadata: Metadata = {
   title: "Brandon Bellero",
-  description: "Always Building. Always Learning.",
+  description: "I'm a product manager with a software engineering background. This page lists my personal projects and writing.",
     generator: 'v0.app'
 }
 
