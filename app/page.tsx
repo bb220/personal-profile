@@ -7,7 +7,7 @@ export default function Home() {
       description:
         "A fitness app with an agentic AI that builds programs, provides personal training, and logs workouts. Built on LangGraph with a long‑term data store.",
       url: "https://www.coachaiapp.info",
-      linkText: "Visit CoachAI",
+      linkText: "Try it out",
     },
     {
       title: "My Easy Golf Scorecard",
@@ -23,7 +23,7 @@ export default function Home() {
     },
     {
       title: "Clean Calculator",
-      description: "A minimal calculator for ChromeOS: simple and legible.",
+      description: "A minimal calculator for ChromeOS: simple and practical.",
       url: "https://chromewebstore.google.com/detail/clean-calculator-extensio/bmhlkhlncmgcdeicfehhpifjhgneenoc",
       linkText: "Learn more",
     },
