@@ -10,6 +10,13 @@ export default function Home() {
       linkText: "Try it out",
     },
     {
+      title: "DinnerPlanner",
+      description:
+        "An AI-powered meal planning agent that suggests recipes, scales portions, and auto-generates shopping lists tailored to your preferences and dietary needs.",
+      url: "https://x.com/brandonbellero/status/1928992668266410112",
+      linkText: "Explore the project",
+    },
+    {
       title: "My Easy Golf Scorecard",
       description: "A simple scorecard app that eliminates distractions so you can enjoy your round.",
       url: "https://myeasygolfscorecard.com",
@@ -52,7 +59,8 @@ export default function Home() {
         <div className="chapter">A Note from the Author</div>
       </div>
       <p className="lead dropcap">
-        Welcome. I'm a product manager with a software engineering background. This page lists my personal projects and writing. If something sparks your curiosity, say hello on{" "}
+        Welcome. I'm a product manager with a software engineering background. This page lists my personal projects and
+        writing. If something sparks your curiosity, say hello on{" "}
         {socialLinks.map((link, i) => (
           <span key={link.name}>
             <Link href={link.url} target="_blank" rel="noopener">
