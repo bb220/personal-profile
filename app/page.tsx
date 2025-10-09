@@ -12,7 +12,7 @@ export default function Home() {
     {
       title: "DinnerPlanner",
       description:
-        "An AI-powered meal planning agent that suggests recipes, scales portions, and auto-generates shopping lists tailored to your preferences and dietary needs.",
+        "An AI-powered meal planning agent that suggests recipes, scales portions, and generates shopping lists tailored to your preferences and dietary needs.",
       url: "https://x.com/brandonbellero/status/1928992668266410112",
       linkText: "Explore the project",
     },
