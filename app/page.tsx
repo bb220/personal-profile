@@ -5,7 +5,7 @@ export default function Home() {
     {
       title: "CoachAI",
       description:
-        "A fitness app with an agentic AI that builds programs, provides personal training, and logs workouts.",
+        "An agentic AI fitness app that builds programs, provides personal training, and logs workouts.",
       url: "https://www.coachaiapp.info",
       linkText: "Try it out",
     },
