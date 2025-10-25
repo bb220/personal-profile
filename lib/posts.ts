@@ -1,3 +1,5 @@
+import fs from "fs"
+import path from "path"
 import matter from "gray-matter"
 import { remark } from "remark"
 import html from "remark-html"
@@ -11,36 +13,43 @@ export interface Post {
   content: string // HTML content
 }
 
-// List of available post slugs
-const POST_SLUGS = ["hitchhikers-guide-agent-evals", "what-is-an-api"]
+const postsDirectory = path.join(process.cwd(), "public/posts")
 
 export function getAllPostSlugs(): string[] {
-  return POST_SLUGS
+  try {
+    const fileNames = fs.readdirSync(postsDirectory)
+    return fileNames.filter((fileName) => fileName.endsWith(".md")).map((fileName) => fileName.replace(/\.md$/, ""))
+  } catch (error) {
+    console.error("Error reading posts directory:", error)
+    return []
+  }
 }
 
 export async function getPostBySlug(slug: string): Promise<Post> {
-  // Fetch markdown file
-  const response = await fetch(`/posts/${slug}.md`)
-  if (!response.ok) {
+  const fullPath = path.join(postsDirectory, `${slug}.md`)
+
+  try {
+    const fileContents = fs.readFileSync(fullPath, "utf8")
+
+    // Parse frontmatter and content
+    const { data, content } = matter(fileContents)
+
+    // Convert markdown to HTML
+    const processedContent = await remark().use(html, { sanitize: false }).process(content)
+
+    const htmlContent = processedContent.toString()
+
+    return {
+      slug,
+      title: data.title,
+      date: data.date,
+      description: data.description,
+      tags: data.tags || [],
+      content: htmlContent,
+    }
+  } catch (error) {
+    console.error(`Error reading post ${slug}:`, error)
     throw new Error(`Post not found: ${slug}`)
-  }
-  const markdown = await response.text()
-
-  // Parse frontmatter and content
-  const { data, content } = matter(markdown)
-
-  // Convert markdown to HTML
-  const processedContent = await remark().use(html, { sanitize: false }).process(content)
-
-  const htmlContent = processedContent.toString()
-
-  return {
-    slug,
-    title: data.title,
-    date: data.date,
-    description: data.description,
-    tags: data.tags || [],
-    content: htmlContent,
   }
 }
 
