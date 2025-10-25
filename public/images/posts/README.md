@@ -1,4 +1,47 @@
-@tailwind base;
+# Blog Post Images
+
+Store all blog post images in this directory.
+
+## Usage in Markdown
+
+To use an image in your blog post markdown:
+
+\`\`\`markdown
+![Alt text description](/images/posts/your-image-name.png)
+\`\`\`
+
+## Best Practices
+
+1. **Naming**: Use descriptive, kebab-case names (e.g., `agent-architecture-diagram.png`)
+2. **Formats**: Use PNG for diagrams/screenshots, JPG for photos
+3. **Size**: Optimize images before uploading (aim for < 500KB when possible)
+4. **Alt Text**: Always include descriptive alt text for accessibility
+
+## Organization
+
+You can organize images by post if needed:
+
+\`\`\`
+/images/posts/
+  ├── hitchhikers-guide/
+  │   ├── eval-framework.png
+  │   └── agent-workflow.png
+  ├── what-is-an-api/
+  │   └── api-diagram.png
+  └── shared/
+      └── common-image.png
+\`\`\`
+
+Then reference them in markdown:
+\`\`\`markdown
+![Eval Framework](/images/posts/hitchhikers-guide/eval-framework.png)
+\`\`\`
+\`\`\`
+
+Now let's enhance the CSS to better handle image captions and make images look even better:
+
+```typescriptreact file="app/globals.css"
+[v0-no-op-code-block-prefix]@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
@@ -138,24 +181,12 @@ hr {
   margin-bottom: 3rem;
 }
 
-/* Post title styling - match H1 headers */
-.post-content .chapter {
-  font-family: "Merriweather", serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 2rem;
-  text-align: left;
-  margin: 0.35rem 0 1rem;
-}
-
 .post-date {
   display: block;
   margin-top: 0.75rem;
   color: #666;
-  font-size: 1.15rem;
-  font-family: "Merriweather", serif;
-  font-weight: 700;
-  font-style: normal;
+  font-size: 0.95rem;
+  font-style: italic;
 }
 
 .post-tags {

@@ -1,6 +1,7 @@
 import Link from "next/link"
+import { getAllPosts } from "@/lib/posts"
 
-export default function Home() {
+export default async function Home() {
   const projects = [
     {
       title: "CoachAI",
@@ -35,26 +36,14 @@ export default function Home() {
     },
   ]
 
-  const writing = [
-    {
-      title: "The Hitchhiker's Guide to Agent Evals",
-      description: "A practical introduction to agent applications and evaluations.",
-      url: "https://brandonbellero.substack.com/p/the-hitchikers-guide-to-agent-evals",
-      linkText: "Read the post",
-    },
-    {
-      title: "What is an API?",
-      description: "The familiar concept at the center of our software‑powered world.",
-      url: "https://substack.com/home/post/p-142761730",
-      linkText: "Read the post",
-    },
-  ]
-
   const socialLinks = [
     { name: "LinkedIn", url: "https://www.linkedin.com/in/brandon-bellero/" },
     { name: "X", url: "https://x.com/brandonbellero" },
     { name: "GitHub", url: "https://github.com/bb220" },
   ]
+
+  // Fetch blog posts from markdown files
+  const posts = await getAllPosts()
 
   return (
     <main className="main">
@@ -106,17 +95,13 @@ export default function Home() {
           <div className="roman">III</div>
           <div className="chapter">Writing</div>
         </div>
-        {writing.map((article, index) => (
-          <div key={index} className="project">
+        {posts.map((post, index) => (
+          <div key={post.slug} className="project">
             <div className="rule">
-              {index + 1}. <span className="head">{article.title}</span>
+              {index + 1}. <span className="head">{post.title}</span>
             </div>
             <p>
-              {article.description}{" "}
-              <Link href={article.url} target="_blank" rel="noopener">
-                {article.linkText}
-              </Link>
-              .
+              {post.description} <Link href={`/posts/${post.slug}`}>Read the post</Link>.
             </p>
           </div>
         ))}
