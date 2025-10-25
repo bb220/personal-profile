@@ -4,8 +4,7 @@ export default function Home() {
   const projects = [
     {
       title: "CoachAI",
-      description:
-        "An agentic AI fitness companion that builds personalized programs and provides real-time coaching.",
+      description: "An agentic AI fitness companion that builds personalized programs and provides real-time coaching.",
       url: "https://www.coachaiapp.info",
       linkText: "Check it out",
     },
@@ -37,6 +36,12 @@ export default function Home() {
   ]
 
   const writing = [
+    {
+      title: "The Hitchhiker's Guide to Agent Evals",
+      description: "A practical introduction to agent applications and evaluations.",
+      url: "https://brandonbellero.substack.com/p/the-hitchikers-guide-to-agent-evals",
+      linkText: "Read the post",
+    },
     {
       title: "What is an API?",
       description: "The familiar concept at the center of our software‑powered world.",
