@@ -2,14 +2,10 @@
 title: What is an API?
 description: The familiar concept at the center of our software-powered world.
 author: Brandon Bellero
-tags: ["apis", "software", "technology"]
 date: January 04, 2022
 ---
 
-# What is an API?
 This post describes the main concept for product professionals. If you work with software, chances are you've heard the term before. Understanding it is a powerful asset.
-
- _This content is based on my experience and provided for educational purposes. The thoughts expressed are my own and do not represent those of my employer._
 
 [![Photo of a dinner plate on an abstract background](https://substackcdn.com/image/fetch/$s_!FDy6!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0ca6178d-cd64-4025-9724-36937013e880_5760x3840.jpeg)](https://substackcdn.com/image/fetch/$s_!FDy6!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0ca6178d-cd64-4025-9724-36937013e880_5760x3840.jpeg) Photo by [Brooke Lark](https://unsplash.com/@brookelark?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/pasta-dish-on-brown-plate-4J059aGa5s4?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
 
