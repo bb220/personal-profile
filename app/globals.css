@@ -317,7 +317,7 @@ hr {
 /* Mobile responsive */
 @media (max-width: 640px) {
   body {
-    font-size: 17px;
+    font-size: 20px;
     padding: 5vh 6vw 10vh;
   }
 
