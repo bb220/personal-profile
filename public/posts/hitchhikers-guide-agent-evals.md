@@ -22,7 +22,7 @@ _Invokes model as the central orchestrator_
 
 ### Evaluating Agents
 
-We can evaluate how agents execute workflows. I highly recommend [LangChain’s excellent deep-dive](https://www.youtube.com/watch?v=_QozKR9eQE8) for more about this concept. To paraphrase, your agent’s entire execution thread is traceable. Thus, you can set up tests to verify agent behavior at increasing levels of scrutiny.
+We evaluate agents by observing how they execute workflows. I highly recommend [LangChain’s excellent deep-dive](https://www.youtube.com/watch?v=_QozKR9eQE8) for more about this concept. Basically, an agent’s entire execution thread is traceable. Thus, you can set up tests to verify agent behavior at different levels of scrutiny.
 
   1. Final output - evaluate the final output
 
@@ -36,11 +36,11 @@ Every agent application has different objectives and tolerance for variable beha
 
 I recently built a fitness companion agent called  [CoachAI](https://www.coachaiapp.info/).
 
-The agent builds personalized programs and provides real-time coaching to users during workouts. To do this effectively, it has access to multiple tools: functions that are critical to managing application state and long-term data storage.
+The agent builds personalized programs and provides real-time coaching to users during workouts. It has access to multiple tools (functions) that are critical to managing application state and long-term data storage.
 
 [![](https://substackcdn.com/image/fetch/$s_!cUrA!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F03df2e48-1ba0-468f-a8f7-266003bb08ea_1250x602.png)](https://substackcdn.com/image/fetch/$s_!cUrA!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F03df2e48-1ba0-468f-a8f7-266003bb08ea_1250x602.png)
 
-One critical behavior is to reliably record user reported data during workouts. To accomplish this, the agent accurately interpret the user’s request, leverages the `record_exercise_sets `tool successfully, and communicates back to the user appropriately.
+One critical behavior is to reliably record user reported data during workouts. To accomplish this, the agent accurately interprets the user’s message, uses the `record_exercise_sets `tool successfully, and communicates back to the user appropriately.
 
 To confirm that the agent does this, I created two types of evaluations.
 
