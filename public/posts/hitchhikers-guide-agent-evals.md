@@ -50,7 +50,7 @@ To confirm that the agent does this, I created two types of evaluations.
 
  _I decided not to include trajectory evaluations because I don't need to monitor efficiency here. However, use cases with a premium on efficiency or sensitive orders of operation benefit from such evaluations._
 
-To implement evaluations,
+To implement the evaluations,
 
   1. Capture the scenario
 
