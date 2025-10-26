@@ -10,7 +10,7 @@ date: October 24, 2025
 
 Evaluations line the road to [Software 2.0](https://karpathy.medium.com/software-2-0-a64152b37c35). They serve a critical role in everything from model training to application development. [Agent architecture](https://www.youtube.com/watch?v=xH_b6iwrASc&t=33s) is the latest pattern to emerge in the rapidly evolving frontier of application development and evaluating agents requires special attention.
 
-Compared to their more deterministic predecessors, agents _think_ more. In other words, they process more logic through the model than theough explicitly written application code. They loop through workflows, deciding which tools (functions) to call and what to do next.
+Compared to their more deterministic predecessors, agents _think_ more. In other words, they process more logic through the model than through explicitly written application code. They loop through workflows, deciding which tools (functions) to call and what to do next.
 
 ![Non-Agent Workflow](/images/posts/non-agent-workflow.png)
 _Invokes model as needed_
