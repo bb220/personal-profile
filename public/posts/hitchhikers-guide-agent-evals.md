@@ -38,7 +38,7 @@ The agent builds personalized programs and provides real-time coaching to users 
 
 One critical behavior is to reliably record user reported data during workouts. To accomplish this, the agent must interpret the user’s request, call the `record_exercise_sets `tool successfully, and communicate back to the user appropriately.
 
-To ensure that the agent does this, I created two types of evaluations for this scenario.
+To confirm that the agent does this, I created two types of evaluations for this scenario.
 
   * Final Output - To ensure the agent communicates appropriately
 
@@ -47,7 +47,7 @@ To ensure that the agent does this, I created two types of evaluations for this 
 
 
 
- _I decided not to include trajectory evaluations because this particular action is not complex. However, agents dealing with a large number of tool calls or sensitive orders of operation benefit from such evaluations._
+ _I decided not to include trajectory evaluations because i don't need to monitor the efficiency of this behavior at this time. However, ise cases with a premium on efficiency or sensitive orders of operation benefit from such evaluations._
 
 To implement these evaluations, I had to
 
@@ -66,7 +66,7 @@ To implement these evaluations, I had to
 
 To evaluate an agent’s behavior you need to capture the scenario in which you expect the behavior to occur. 
 
-This is challenging with agents because they involve multi-turn interactions. For example, users of CoachAI do not immediately begin reporting data in an action workout session. They start a conversation with the agent, discuss general fitness topics, start a workout session, and then start reporting workout data. Further, the conversations are nondeterministic so every user can take a different path to the scenario that I want to evaluate.
+This is challenging with agents because they involve multi-turn interactions. For example, users of CoachAI do not immediately begin reporting data for workout session. The conversations are nondeterministic so every user takes a different path to the scenario that I want to evaluate.
 
 One way to overcome this is to _time travel_ to the scenario with a fixed, mocked application state. The approach is simple: define an application state one turn prior to the scenario based on an example of a common path to it. The agent application instantiates with this state and immediately hits the scenario when the evaluations run.
 
@@ -76,7 +76,7 @@ For my agent, I defined a JSON object that mimics the application state exactly 
 
 #### Create datasets
 
-The datasets describe the user input and your expected behavior for the agent. Often referred to as the “Golden Dataset”, they provide examples of ideal behavior that your agent will be benchmarked against.
+The datasets describe input/output pairs of expected behavior for the agent. Often referred to as the “Golden Dataset”, they provide examples of ideal behavior that your agent will be benchmarked against.
 
 For my agent, I have datasets for both the final output and single step evaluations. The final output dataset contains sets of user inputs with expected agent responses.
 
@@ -104,7 +104,7 @@ Ex.
 
 #### Define evaluator logic
 
-Last but not least, the evaluator logic itself must be defined. The evaluator logic compares the action of the agent with the examples from your datasets and generates a score.
+Last but not least, the evaluator logic itself is written. It compares the action of the agent with the examples from your datasets and generates a score.
 
 My final output evaluator uses [LLM-as-a-judge method](https://docs.langchain.com/langsmith/llm-as-judge) to determine whether the agent’s response is similar to my example. See a [code snippet here](https://gist.github.com/bb220/1c89076af471786bbeded7898ba2472b).
 
@@ -112,8 +112,8 @@ My single step evaluator inspects the tool calls and responses from the agent’
 
 #### All together now
 
-My evaluation framework takes the mocked application state, spins up an instance of the agent, runs it with the evaluation datasets, and then scores the agent based on the evaluator logic.
+My evaluation framework spins up an instance of the agent with the mocked application state, runs it with the evaluation datasets, and scores the agent based on the evaluator logic.
 
-With these pieces in place, I have evaluations that I can run at any time to ensure the agent is behaving as expected. When developing new features or updating the application, this is indispensable.
+With these pieces in place, I have evaluations that ensure the agent is behaving as expected when users repot data during workouts. When developing new features or updating the application, this is indispensable.
 
  _Thank you for reading._
