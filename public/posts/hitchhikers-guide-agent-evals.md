@@ -40,17 +40,17 @@ The agent builds personalized programs and provides real-time coaching to users 
 
 [![](https://substackcdn.com/image/fetch/$s_!cUrA!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F03df2e48-1ba0-468f-a8f7-266003bb08ea_1250x602.png)](https://substackcdn.com/image/fetch/$s_!cUrA!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F03df2e48-1ba0-468f-a8f7-266003bb08ea_1250x602.png)
 
-One critical behavior is to reliably record user reported data during workouts. To accomplish this, the agent must interpret the user’s request, call the `record_exercise_sets `tool successfully, and communicate back to the user appropriately.
+One critical behavior is to reliably record user reported data during workouts. To accomplish this, the agent accurately interpret the user’s request, leverages the `record_exercise_sets `tool successfully, and communicates back to the user appropriately.
 
-To confirm that the agent does this, I created two types of evaluations for this scenario.
+To confirm that the agent does this, I created two types of evaluations.
 
-  * Final Output - To ensure the agent communicates appropriately
+  * Final Output - Ensure the agent communicates appropriately
 
-  * Single Step - To ensure the agent calls `record_exercise_sets` successfully
+  * Single Step - Emsure the agent uses `record_exercise_sets` successfully
 
  _I decided not to include trajectory evaluations because I don't need to monitor efficiency here. However, use cases with a premium on efficiency or sensitive orders of operation benefit from such evaluations._
 
-To implement these evaluations, I had to
+To implement evaluations,
 
   1. Capture the scenario
 
@@ -58,7 +58,7 @@ To implement these evaluations, I had to
 
   3. Define evaluator logic
 
- _Note: I used[LangGraph SDK](https://docs.langchain.com/langsmith/sdk) for my evaluation framework. In this post, I avoid framework-specific details as much as possible._
+ _I used[LangGraph SDK](https://docs.langchain.com/langsmith/sdk) for my evaluation framework. In this post, I avoid framework-specific details as much as possible._
 
 #### Capture the scenario
 
