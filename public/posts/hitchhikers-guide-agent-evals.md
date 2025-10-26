@@ -15,7 +15,10 @@ Compared to their more deterministic predecessors, agents _think_ more. In other
 ![Non-Agent Workflow](/images/posts/non-agent-workflow.png) _Invokes model as needed_
 
 [![](https://substackcdn.com/image/fetch/$s_!lSMP!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F1fa69528-851e-4d22-bd15-6d10416b9250_965x664.png)](https://substackcdn.com/image/fetch/$s_!lSMP!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F1fa69528-851e-4d22-bd15-6d10416b9250_965x664.png
-_Invokes model as the central orchestrator_
+
+Invokes model as the central orchestrator
+
+
 
 ### Evaluating Agents
 
