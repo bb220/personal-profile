@@ -24,11 +24,11 @@ _Invokes model as the central orchestrator_
 
 We can evaluate how agents execute workflows. I highly recommend [LangChain’s excellent deep-dive](https://www.youtube.com/watch?v=_QozKR9eQE8) for more about this concept. To paraphrase, your agent’s entire execution thread is traceable. Thus, you can set up tests to verify agent behavior at increasing levels of scrutiny.
 
-  1. Final output - evaluate the agent’s final output
+  1. Final output - evaluate the final output
 
-  2. Single step - evaluate a single step in the agent’s execution
+  2. Single step - evaluate a single step in the execution
 
-  3. Trajectory - evaluate the order of steps taken in the agent’s execution
+  3. Trajectory - evaluate the order of steps in the execution
 
 ### In Practice
 
@@ -48,10 +48,7 @@ To confirm that the agent does this, I created two types of evaluations for this
 
   * Single Step - To ensure the agent calls `record_exercise_sets` successfully
 
-
-
-
- _I decided not to include trajectory evaluations because i don't need to monitor the efficiency of this behavior at this time. However, ise cases with a premium on efficiency or sensitive orders of operation benefit from such evaluations._
+ _I decided not to include trajectory evaluations because I don't need to monitor efficiency here. However, use cases with a premium on efficiency or sensitive orders of operation benefit from such evaluations._
 
 To implement these evaluations, I had to
 
@@ -61,18 +58,16 @@ To implement these evaluations, I had to
 
   3. Define evaluator logic
 
-
-
-
- _Note: I used[LangGraph SDK](https://docs.langchain.com/langsmith/sdk) for my evaluation framework. In this post, I’ll keep the conversation conceptual and avoid framework-specific details as much as possible._
+ _Note: I used[LangGraph SDK](https://docs.langchain.com/langsmith/sdk) for my evaluation framework. In this post, I avoid framework-specific details as much as possible._
 
 #### Capture the scenario
 
-To evaluate an agent’s behavior you need to capture the scenario in which you expect the behavior to occur. 
+To evaluate an agent’s behavior,
+capture the scenario in which you expect the behavior to occur. 
 
-This is challenging with agents because they involve multi-turn interactions. For example, users of CoachAI do not immediately begin reporting data for workout session. The conversations are nondeterministic so every user takes a different path to the scenario that I want to evaluate.
+This is challenging with agents because they involve multi-turn interactions. For example, users of CoachAI do not immediately begin reporting data for workout session. Conversations are nondeterministic so every user takes a different path to the scenario that I want to evaluate.
 
-One way to overcome this is to _time travel_ to the scenario with a fixed, mocked application state. The approach is simple: define an application state one turn prior to the scenario based on an example of a common path to it. The agent application instantiates with this state and immediately hits the scenario when the evaluations run.
+One way to overcome this is to _time-travel_ to the scenario with a static, mocked application state. The approach is simple: define an application state one turn prior to the scenario based on an example of a common path to it. The agent application instantiates with this state and immediately hits the scenario when the evaluations run.
 
 For my agent, I defined a JSON object that mimics the application state exactly one turn prior to when users commonly report their set information during an active workout. See [code snippet here](https://gist.github.com/bb220/392e28cfb092d673b2a05a44d9ed9e12).
 
@@ -108,7 +103,7 @@ Ex.
 
 #### Define evaluator logic
 
-Last but not least, the evaluator logic itself is written. It compares the action of the agent with the examples from your datasets and generates a score.
+Last but not least, write the evaluator logic. It compares the action of the agent with the examples from your datasets to generate a score. I find binary pass/fail scores to be most practical.
 
 My final output evaluator uses [LLM-as-a-judge method](https://docs.langchain.com/langsmith/llm-as-judge) to determine whether the agent’s response is similar to my example. See a [code snippet here](https://gist.github.com/bb220/1c89076af471786bbeded7898ba2472b).
 
