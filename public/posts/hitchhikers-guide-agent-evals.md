@@ -10,11 +10,11 @@ date: October 24, 2025
 
 Evaluations line the road to [Software 2.0](https://karpathy.medium.com/software-2-0-a64152b37c35). They serve a critical role in everything from model training to application development. [Agent architecture](https://www.youtube.com/watch?v=xH_b6iwrASc&t=33s) is the latest pattern to emerge in the rapidly evolving frontier of application development and evaluating agents requires special attention.
 
-Compared to their more deterministic predecessors, agents _think_ more. In other words, they process more logic through an AI model than explicitly written application code. They loop through workflows, deciding which tools (functions) to call and what to do next.
+Compared to their more deterministic predecessors, agents _think_ more. In other words, they process more logic through the model than theough explicitly written application code. They loop through workflows, deciding which tools (functions) to call and what to do next.
 
-![Non-Agent Workflow](/images/posts/non-agent-workflow.png)Invokes model as needed
+![Non-Agent Workflow](/images/posts/non-agent-workflow.png)_Invokes model as needed_
 
-[![](https://substackcdn.com/image/fetch/$s_!lSMP!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F1fa69528-851e-4d22-bd15-6d10416b9250_965x664.png)](https://substackcdn.com/image/fetch/$s_!lSMP!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F1fa69528-851e-4d22-bd15-6d10416b9250_965x664.png)Invokes model as the central orchestrator
+[![](https://substackcdn.com/image/fetch/$s_!lSMP!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F1fa69528-851e-4d22-bd15-6d10416b9250_965x664.png)](https://substackcdn.com/image/fetch/$s_!lSMP!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F1fa69528-851e-4d22-bd15-6d10416b9250_965x664.png_Invokes model as the central orchestrator_
 
 ### Evaluating Agents
 
