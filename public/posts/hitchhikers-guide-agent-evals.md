@@ -113,6 +113,6 @@ My single step evaluator inspects the tool calls and responses from the agent’
 
 My evaluation framework spins up an instance of the agent with the mocked application state, runs it with the evaluation datasets, and scores the agent based on the evaluator logic.
 
-With these pieces in place, I have evaluations that ensure the agent is behaving as expected when users repot data during workouts. When developing new features or updating the application, this is indispensable.
+With these pieces in place, I have evaluations that ensure the agent is behaving as expected when users report data during workouts. When developing new features or updating the application, this is indispensable.
 
  _Thank you for reading._
