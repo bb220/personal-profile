@@ -5,7 +5,7 @@ author: Brandon Bellero
 date: January 04, 2022
 ---
 
-[![Photo of a dinner plate on an abstract background](https://substackcdn.com/image/fetch/$s_!FDy6!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0ca6178d-cd64-4025-9724-36937013e880_5760x3840.jpeg)](https://substackcdn.com/image/fetch/$s_!FDy6!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0ca6178d-cd64-4025-9724-36937013e880_5760x3840.jpeg) Photo by [Brooke Lark](https://unsplash.com/@brookelark?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/pasta-dish-on-brown-plate-4J059aGa5s4?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
+[![Photo of a dinner plate on an abstract background](https://substackcdn.com/image/fetch/$s_!FDy6!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0ca6178d-cd64-4025-9724-36937013e880_5760x3840.jpeg)](https://substackcdn.com/image/fetch/$s_!FDy6!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0ca6178d-cd64-4025-9724-36937013e880_5760x3840.jpeg) _Photo by [Brooke Lark](https://unsplash.com/@brookelark?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)_
 
 ### **API stands for Application Programming Interface.**
 
