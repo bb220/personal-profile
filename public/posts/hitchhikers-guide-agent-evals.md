@@ -12,17 +12,17 @@ Evaluations line the road to [Software 2.0](https://karpathy.medium.com/software
 
 Compared to their more deterministic predecessors, agents _think_ more. In other words, they process more logic through the model than through explicitly written application code. They loop through workflows, deciding which tools (functions) to call and what to do next.
 
-![Non-Agent Workflow](/images/posts/non-agent-workflow.png)
+![Non-Agent Workflow](/images/posts/hitchhikers-guide-to-agent-evals/non-agent-workflow.png)
 _Invokes model as needed_
 
-[![](https://substackcdn.com/image/fetch/$s_!lSMP!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F1fa69528-851e-4d22-bd15-6d10416b9250_965x664.png)](https://substackcdn.com/image/fetch/$s_!lSMP!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F1fa69528-851e-4d22-bd15-6d10416b9250_965x664.png)
+![Agentic Workflow](/images/posts/hitchhikers-guide-to-agent-evals/agentic-workflow.png)
 _Invokes model as the central orchestrator_
 
 
 
 ### Evaluating Agents
 
-We evaluate agents by observing how they execute workflows. I highly recommend [LangChain’s excellent deep-dive](https://www.youtube.com/watch?v=_QozKR9eQE8) for more about this concept. Basically, an agent’s entire execution thread is traceable. Thus, you can set up tests to verify agent behavior at different levels of scrutiny.
+We evaluate agents by observing how they execute workflows. I highly recommend [LangChain’s overview](https://www.youtube.com/watch?v=_QozKR9eQE8) for more about this concept. Basically, an agent’s entire execution thread is traceable. Thus, you can set up tests to verify agent behavior at different levels of scrutiny.
 
   1. Final Output - evaluate the final output
 
@@ -38,9 +38,9 @@ I recently built a fitness companion agent called  [CoachAI](https://www.coachai
 
 The agent builds personalized programs and provides real-time coaching to users during workouts. It has access to multiple tools (functions) that are critical to managing application state and long-term data storage.
 
-[![](https://substackcdn.com/image/fetch/$s_!cUrA!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F03df2e48-1ba0-468f-a8f7-266003bb08ea_1250x602.png)](https://substackcdn.com/image/fetch/$s_!cUrA!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F03df2e48-1ba0-468f-a8f7-266003bb08ea_1250x602.png)
+![CoachAI Workflow](/images/posts/hitchhikers-guide-to-agent-evals/coach.png)
 
-One critical behavior is to reliably record user reported data during workouts. To accomplish this, the agent accurately interprets the user’s message, uses the `record_exercise_sets `tool successfully, and communicates back to the user appropriately.
+One critical behavior is to reliably record user reported data during workouts. To accomplish this, the agent accurately interprets the user’s message, uses the `record_exercise_sets` tool successfully, and communicates back to the user appropriately.
 
 To confirm that the agent does this, I created two types of evaluations.
 
@@ -48,7 +48,7 @@ To confirm that the agent does this, I created two types of evaluations.
 
   * Single Step - Emsure the agent uses `record_exercise_sets` successfully
 
- _I decided not to include trajectory evaluations because I don't need to monitor efficiency here. However, use cases with a premium on efficiency or sensitive orders of operation benefit from such evaluations._
+ _I decided not to include trajectory evaluations because I don't need to monitor efficiency. However, use cases with a premium on efficiency or sensitive orders of operation benefit from such evaluations._
 
 To implement the evaluations,
 
@@ -71,7 +71,7 @@ One way to overcome this is to _time-travel_ to the scenario with a static, mock
 
 For my agent, I defined a JSON object that mimics the application state exactly one turn prior to when users commonly report their set information during an active workout. See [code snippet here](https://gist.github.com/bb220/392e28cfb092d673b2a05a44d9ed9e12).
 
- _More comprehensive approaches are available, such as[simulating multi-turn conversations](https://docs.langchain.com/langsmith/multi-turn-simulation) and [evaluating traces from live environments](https://docs.langchain.com/langsmith/online-evaluations#set-up-online-evaluators)._
+ _More comprehensive approaches exist. See [simulating multi-turn conversations](https://docs.langchain.com/langsmith/multi-turn-simulation) and [evaluating traces from live environments](https://docs.langchain.com/langsmith/online-evaluations#set-up-online-evaluators)._
 
 #### Create datasets
 

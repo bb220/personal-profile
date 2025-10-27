@@ -282,10 +282,22 @@ hr {
   margin: 1.5rem auto;
 }
 
-/* Center align paragraphs that only contain images */
-.post-body p:has(img:only-child) {
+/* Center align paragraphs that contain images or are immediately after images */
+.post-body p:has(img),
+.post-body p:has(a > img) {
   text-align: center;
   text-indent: 0;
+}
+
+/* Center italic text that follows images (captions) */
+.post-body p:has(img) + p em:only-child,
+.post-body p:has(a > img) + p em:only-child {
+  display: block;
+  text-align: center;
+  font-style: italic;
+  color: #666;
+  font-size: 0.95rem;
+  margin-top: -1rem;
 }
 
 /* Blockquotes */
