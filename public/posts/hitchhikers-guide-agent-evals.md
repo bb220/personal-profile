@@ -24,9 +24,9 @@ _Invokes model as the central orchestrator_
 
 We evaluate agents by observing how they execute workflows. I highly recommend [LangChain’s excellent deep-dive](https://www.youtube.com/watch?v=_QozKR9eQE8) for more about this concept. Basically, an agent’s entire execution thread is traceable. Thus, you can set up tests to verify agent behavior at different levels of scrutiny.
 
-  1. Final output - evaluate the final output
+  1. Final Output - evaluate the final output
 
-  2. Single step - evaluate a single step in the execution
+  2. Single Step - evaluate a single step in the execution
 
   3. Trajectory - evaluate the order of steps in the execution
 
