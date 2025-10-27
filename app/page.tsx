@@ -47,11 +47,13 @@ export default function Home() {
       slug: "hitchhikers-guide-agent-evals",
       title: "The Hitchhiker's Guide to Agent Evals",
       description: "A practical introduction to agent applications and evaluations.",
+      date: "October 24, 2025",
     },
     {
       slug: "what-is-an-api",
       title: "What is an API?",
       description: "The familiar concept at the center of our software-powered world.",
+      date: "January 04, 2022",
     },
   ]
 
@@ -86,15 +88,11 @@ export default function Home() {
         {projects.map((project, index) => (
           <div key={index} className="project">
             <div className="rule">
-              {index + 1}. <span className="head">{project.title}</span>
-            </div>
-            <p>
-              {project.description}{" "}
-              <Link href={project.url} target="_blank" rel="noopener">
-                {project.linkText}
+              <Link href={project.url} target="_blank" rel="noopener" className="title-link">
+                <span className="head">{project.title}</span>
               </Link>
-              .
-            </p>
+            </div>
+            <p>{project.description}</p>
           </div>
         ))}
       </section>
@@ -108,11 +106,12 @@ export default function Home() {
         {posts.map((post, index) => (
           <div key={post.slug} className="project">
             <div className="rule">
-              {index + 1}. <span className="head">{post.title}</span>
+              <Link href={`/posts/${post.slug}`} className="title-link">
+                <span className="head">{post.title}</span>
+              </Link>
             </div>
-            <p>
-              {post.description} <Link href={`/posts/${post.slug}`}>Read the post</Link>.
-            </p>
+            <div className="post-meta">{post.date}</div>
+            <p>{post.description}</p>
           </div>
         ))}
       </section>

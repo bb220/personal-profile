@@ -63,11 +63,10 @@ section {
 p {
   text-align: left;
   margin: 0;
-  text-indent: 2em;
+  text-indent: 0;
 }
 
 p.lead {
-  text-indent: 0;
   font-size: 1.05em;
 }
 
@@ -79,6 +78,24 @@ a {
 
 a:hover {
   border-bottom-color: var(--accent);
+}
+
+/* Title links for projects and writing */
+a.title-link {
+  color: var(--ink);
+  border-bottom: 1px solid color-mix(in srgb, var(--ink) 60%, transparent);
+}
+
+a.title-link:hover {
+  border-bottom-color: var(--ink);
+}
+
+/* Post metadata on homepage */
+.post-meta {
+  font-size: 1.2rem;
+  color: #666;
+  font-style: italic;
+  margin: 0.4rem 0 0.6rem;
 }
 
 hr {
@@ -207,7 +224,6 @@ hr {
 .post-body p {
   margin-bottom: 1.5rem;
   line-height: 1.6;
-  text-indent: 0;
 }
 
 /* Drop cap on first paragraph */
