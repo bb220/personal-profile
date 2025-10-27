@@ -39,6 +39,22 @@ export function markdownToHtml(markdown: string): string {
     breaks: false, // Don't convert \n to <br>
   })
 
+  // Custom renderer to add target="_blank" to external links
+  const renderer = new marked.Renderer()
+  const originalLinkRenderer = renderer.link.bind(renderer)
+
+  renderer.link = (token) => {
+    const html = originalLinkRenderer(token)
+    // Check if href exists and is a string, then add target="_blank" for external links
+    const href = typeof token === "string" ? token : token?.href
+    if (href && typeof href === "string" && (href.startsWith("http://") || href.startsWith("https://"))) {
+      return html.replace("<a", '<a target="_blank" rel="noopener noreferrer"')
+    }
+    return html
+  }
+
+  marked.setOptions({ renderer })
+
   // Convert markdown to HTML using marked
   return marked.parse(markdown) as string
 }
