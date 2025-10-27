@@ -55,7 +55,6 @@ section {
 .rule {
   font-family: "Merriweather", serif;
   font-weight: 700;
-  font-style: italic;
   font-size: 1.15rem;
   margin: 2.25rem 0 0.6rem;
 }
@@ -92,9 +91,10 @@ a.title-link:hover {
 
 /* Post metadata on homepage */
 .post-meta {
-  font-size: 1.2rem;
+  font-size: 1.05rem;
   color: #666;
-  font-style: italic;
+  font-family: "Merriweather", serif;
+  font-weight: 700;
   margin: 0.4rem 0 0.6rem;
 }
 
@@ -110,7 +110,6 @@ hr {
 
 .project .head {
   font-family: "Merriweather", serif;
-  font-style: italic;
   font-weight: 700;
 }
 
