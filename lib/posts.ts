@@ -1,6 +1,4 @@
-import matter from "gray-matter"
-import { remark } from "remark"
-import html from "remark-html"
+import { parseFrontmatter, markdownToHtml } from "./markdown-parser"
 
 export interface Post {
   slug: string
@@ -11,36 +9,46 @@ export interface Post {
   content: string // HTML content
 }
 
-// List of available post slugs
-const POST_SLUGS = ["hitchhikers-guide-agent-evals", "what-is-an-api"]
-
+// Get all available post slugs by checking what files exist
 export function getAllPostSlugs(): string[] {
-  return POST_SLUGS
+  // Hardcode the list of posts (you'll need to update this when adding new posts)
+  return ["hitchhikers-guide-agent-evals", "what-is-an-api"]
 }
 
 export async function getPostBySlug(slug: string): Promise<Post> {
-  // Fetch markdown file from public directory
-  const response = await fetch(`/posts/${slug}.md`)
-  if (!response.ok) {
+  try {
+    // Fetch the markdown file from /public/posts/
+    const response = await fetch(`/posts/${slug}.md`)
+
+    if (!response.ok) {
+      throw new Error(`Post not found: ${slug}`)
+    }
+
+    const markdown = await response.text()
+
+    // Parse frontmatter and content
+    const { data, content } = parseFrontmatter(markdown)
+
+    // Convert markdown to HTML
+    const htmlContent = markdownToHtml(content)
+
+    return {
+      slug,
+      title: (data.title as string) || "",
+      date: (data.date as string) || "",
+      description: (data.description as string) || "",
+      tags: data.tags
+        ? typeof data.tags === "string"
+          ? data.tags.split(",").map((t: string) => t.trim())
+          : Array.isArray(data.tags)
+            ? data.tags
+            : []
+        : [],
+      content: htmlContent,
+    }
+  } catch (error) {
+    console.error(`Error loading post ${slug}:`, error)
     throw new Error(`Post not found: ${slug}`)
-  }
-  const markdown = await response.text()
-
-  // Parse frontmatter and content
-  const { data, content } = matter(markdown)
-
-  // Convert markdown to HTML
-  const processedContent = await remark().use(html, { sanitize: false }).process(content)
-
-  const htmlContent = processedContent.toString()
-
-  return {
-    slug,
-    title: data.title,
-    date: data.date,
-    description: data.description,
-    tags: data.tags || [],
-    content: htmlContent,
   }
 }
 

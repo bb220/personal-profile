@@ -1,7 +1,6 @@
 import Link from "next/link"
-import { getAllPosts } from "@/lib/posts"
 
-export default async function Home() {
+export default function Home() {
   const projects = [
     {
       title: "CoachAI",
@@ -42,8 +41,19 @@ export default async function Home() {
     { name: "GitHub", url: "https://github.com/bb220" },
   ]
 
-  // Fetch blog posts from markdown files
-  const posts = await getAllPosts()
+  // Hardcoded posts data for the homepage
+  const posts = [
+    {
+      slug: "hitchhikers-guide-agent-evals",
+      title: "The Hitchhiker's Guide to Agent Evals",
+      description: "A practical introduction to agent applications and evaluations.",
+    },
+    {
+      slug: "what-is-an-api",
+      title: "What is an API?",
+      description: "The familiar concept at the center of our software-powered world.",
+    },
+  ]
 
   return (
     <main className="main">
