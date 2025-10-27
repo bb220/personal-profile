@@ -5,13 +5,11 @@ author: Brandon Bellero
 date: January 04, 2022
 ---
 
-This post describes the main concept for product professionals. If you work with software, chances are you've heard the term before. Understanding it is a powerful asset.
-
 [![Photo of a dinner plate on an abstract background](https://substackcdn.com/image/fetch/$s_!FDy6!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0ca6178d-cd64-4025-9724-36937013e880_5760x3840.jpeg)](https://substackcdn.com/image/fetch/$s_!FDy6!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0ca6178d-cd64-4025-9724-36937013e880_5760x3840.jpeg) Photo by [Brooke Lark](https://unsplash.com/@brookelark?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/pasta-dish-on-brown-plate-4J059aGa5s4?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
 
 ### **API stands for Application Programming Interface.**
 
-Fortunately, it’s a concept you're already familiar with. You experience it whenever you order food in a restaurant.
+It’s a concept you're already familiar with. You experience it whenever you order food in a restaurant.
 
 Before we get there, let’s break down the term Application Programming Interface.
 
@@ -21,10 +19,7 @@ Before we get there, let’s break down the term Application Programming Interfa
 
   * An Interface is a means through which two things interact. 
 
-
-
-
-Thus, we arrive at the mighty Application Programming Interface. It is a means through which one application can [programmatically](https://www.dictionary.com/browse/programmatically#:~:text=Programmatically%20means%20done%20using%20a%20computer%20program.&text=Programmatically%20is%20used%20to%20refer,manually%20\(by%20a%20person\).) interact with another application.
+Thus, we arrive at the mighty Application Programming Interface. It is a means through which one application [programmatically](https://www.dictionary.com/browse/programmatically#:~:text=Programmatically%20means%20done%20using%20a%20computer%20program.&text=Programmatically%20is%20used%20to%20refer,manually%20\(by%20a%20person\).) interacts with another application.
 
 Software developers program interactions between applications through APIs.
 
@@ -39,9 +34,6 @@ How do you use it to get a delicious meal?
   * Submit your request - There is a service staff waiting for you to submit your order. Once you submit your request to the server, the server processes its and communicates the information to the chefs who begin preparing the meal. Once the meal is ready, the chefs notify the server.
 
   * Receive your meal - Shortly after, the server returns with your meal - satisfying your request.
-
-
-
 
 In our analogy, the restaurant's service is an API. It is an interface that you interact with to get the meal from the restaurant. The restaurant is a complex system, but it provides an abstracted interface to make it easy and efficient for you and other customers to access its offerings.
 
