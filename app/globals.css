@@ -20,7 +20,7 @@ body {
   color: var(--ink);
   font-family: "EB Garamond", ui-serif, Georgia, serif;
   font-size: 22px;
-  line-height: 1.4;
+  line-height: 1.5;
   display: flex;
   justify-content: center;
   padding: 6vh 6vw 12vh;
