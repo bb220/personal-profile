@@ -22,12 +22,141 @@ body {
   font-size: 22px;
   line-height: 1.5;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 6vw 12vh;
+}
+
+/* Header styles */
+.site-header {
+  width: 100%;
+  max-width: var(--max);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3vh 0 4vh;
+}
+
+.site-name {
+  font-family: "Merriweather", serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--ink);
+  border: none;
+  letter-spacing: 0.02em;
+}
+
+.site-name:hover {
+  border: none;
+  opacity: 0.7;
+}
+
+.menu-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  color: var(--ink);
+  display: flex;
+  align-items: center;
   justify-content: center;
-  padding: 6vh 6vw 12vh;
+  transition: opacity 0.2s;
+}
+
+.menu-button:hover {
+  opacity: 0.7;
+}
+
+/* Menu overlay and panel */
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 998;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.menu-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: min(300px, 80vw);
+  background: var(--paper);
+  z-index: 999;
+  padding: 2rem;
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+  animation: slideIn 0.3s ease-out;
+}
+
+.menu-close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-bottom: 2rem;
+  transition: opacity 0.2s;
+}
+
+.menu-close:hover {
+  opacity: 0.7;
+}
+
+.menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-list li {
+  margin-bottom: 1.5rem;
+}
+
+.menu-list a {
+  font-family: "Merriweather", serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--ink);
+  border: none;
+  display: block;
+  transition: opacity 0.2s;
+}
+
+.menu-list a:hover {
+  opacity: 0.7;
+  border: none;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
 
 .main {
   max-width: var(--max);
+  width: 100%;
+  padding-top: 2vh;
 }
 
 .center {
@@ -96,6 +225,17 @@ a.title-link:hover {
   font-family: "Merriweather", serif;
   font-weight: 700;
   margin: 0.4rem 0 0.6rem;
+}
+
+/* Added styling for "More posts" link */
+.more-link {
+  font-size: 0.95rem;
+  color: var(--accent);
+  border-bottom: 1px solid color-mix(in srgb, var(--accent) 60%, transparent);
+}
+
+.more-link:hover {
+  border-bottom-color: var(--accent);
 }
 
 hr {
@@ -345,7 +485,7 @@ hr {
 @media (max-width: 640px) {
   body {
     font-size: 20px;
-    padding: 5vh 6vw 10vh;
+    padding: 0 6vw 10vh;
   }
 
   .post-body > p:first-of-type::first-letter {

@@ -2,11 +2,13 @@ import type React from "react"
 import type { Metadata } from "next"
 import { Analytics } from "@vercel/analytics/next"
 import { Suspense } from "react"
+import { Header } from "@/components/header"
 import "./globals.css"
 
 export const metadata: Metadata = {
   title: "Brandon Bellero",
-  description: "I'm a product manager with a software engineering background. This page lists my personal projects and writing.",
+  description:
+    "I'm a product manager with a software engineering background. This page lists my personal projects and writing.",
     generator: 'v0.app'
 }
 
@@ -24,6 +26,7 @@ export default function RootLayout({
         />
       </head>
       <body>
+        <Header />
         <Suspense fallback={null}>{children}</Suspense>
         <Analytics />
       </body>

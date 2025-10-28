@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react"
 import { getPostBySlug, formatDate, type Post } from "@/lib/posts"
-import Link from "next/link"
 
 export default function PostPageClient({
   params,
@@ -47,9 +46,6 @@ export default function PostPageClient({
       <main className="main">
         <div className="center">
           <p>Post not found</p>
-          <Link href="/" className="back-link">
-            ← Back to Home
-          </Link>
         </div>
       </main>
     )
@@ -57,13 +53,6 @@ export default function PostPageClient({
 
   return (
     <main className="main">
-      {/* Back navigation */}
-      <div className="post-header">
-        <Link href="/" className="back-link">
-          ← Back to Home
-        </Link>
-      </div>
-
       {/* Post article */}
       <article className="post-content">
         {/* Title and metadata */}
@@ -88,6 +77,11 @@ export default function PostPageClient({
         {/* Post content */}
         <div className="post-body" dangerouslySetInnerHTML={{ __html: post.content }} />
       </article>
+
+      <hr />
+      <p className="center" style={{ opacity: 0.7, textIndent: 0, marginTop: "1.25rem", marginBottom: "3rem" }}>
+        © {new Date().getFullYear()} Brandon Bellero
+      </p>
     </main>
   )
 }
