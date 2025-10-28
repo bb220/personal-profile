@@ -36,7 +36,7 @@ Every agent application has different objectives and tolerance for variable beha
 
 I recently built a fitness companion agent called  [CoachAI](https://www.coachaiapp.info/).
 
-The agent builds personalized programs and provides real-time coaching to users during workouts. It has access to multiple tools (functions) that are critical to managing application state and long-term data storage.
+The agent builds personalized programs and provides real-time coaching to users during workouts. It has access to tools for managing application state and long-term data storage.
 
 ![CoachAI Workflow](/images/posts/hitchhikers-guide-to-agent-evals/coach.png)
 
