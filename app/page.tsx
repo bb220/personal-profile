@@ -44,9 +44,9 @@ export default function Home() {
           <div className="post-meta">October 24, 2025</div>
           <p>A practical introduction to agent applications and evaluations.</p>
         </div>
-        <div style={{ textAlign: "right", marginTop: "0.75rem" }}>
+        <div style={{ textAlign: "center", marginTop: "0.75rem" }}>
           <Link href="/posts" className="more-link">
-            More posts
+            All posts
           </Link>
         </div>
 
@@ -58,9 +58,9 @@ export default function Home() {
           </div>
           <p>An agentic AI fitness companion that builds personalized programs and provides real-time coaching.</p>
         </div>
-        <div style={{ textAlign: "right", marginTop: "0.75rem" }}>
+        <div style={{ textAlign: "center", marginTop: "0.75rem" }}>
           <Link href="/projects" className="more-link">
-            More projects
+            All projects
           </Link>
         </div>
       </section>
