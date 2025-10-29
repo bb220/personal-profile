@@ -39,12 +39,14 @@ export function Header() {
             <ul className="menu-list">
               <li>
                 <Link href="/posts" onClick={closeMenu}>
-                  III. Posts
+                  <span className="menu-roman">III</span>
+                  <span className="menu-section">Posts</span>
                 </Link>
               </li>
               <li>
                 <Link href="/projects" onClick={closeMenu}>
-                  IV. Projects
+                  <span className="menu-roman">IV</span>
+                  <span className="menu-section">Projects</span>
                 </Link>
               </li>
             </ul>

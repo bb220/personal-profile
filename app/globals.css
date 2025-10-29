@@ -116,17 +116,13 @@ body {
   margin: 0;
 }
 
-.menu-list li {
-  margin-bottom: 1.5rem;
-}
-
 .menu-list a {
-  font-family: "Merriweather", serif;
-  font-weight: 700;
-  font-size: 1.5rem;
+  /* Updated to flex layout for split roman numeral and section name */
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
   color: var(--ink);
   border: none;
-  display: block;
   transition: opacity 0.2s;
 }
 
@@ -135,22 +131,23 @@ body {
   border: none;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+/* Added styles for roman numerals in menu to match home page */
+.menu-roman {
+  font-family: "Merriweather", serif;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  font-size: 1.25rem;
 }
 
-@keyframes slideIn {
-  from {
-    transform: translateX(100%);
-  }
-  to {
-    transform: translateX(0);
-  }
+/* Added styles for section names in menu to match home page */
+.menu-section {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-size: 1.75rem;
+}
+
+.menu-list li {
+  margin-bottom: 1.5rem;
 }
 
 .main {
