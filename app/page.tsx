@@ -20,7 +20,7 @@ export default function Home() {
         <Link href="https://www.pippolabs.xyz/" target="_blank" rel="noopener">
           Pippo Labs
         </Link>
-        . This site hosts my blog posts and projects. Say hello on{" "}
+        . Say hello on{" "}
         {socialLinks.map((link, i) => (
           <span key={link.name}>
             <Link href={link.url} target="_blank" rel="noopener">
