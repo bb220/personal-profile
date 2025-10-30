@@ -10,13 +10,6 @@ export default function ProjectsPage() {
 
   const projects = [
     {
-      title: "Pippo Labs",
-      description:
-        "A technology studio that experiments with emerging ideas and brings new software products to market.",
-      url: "https://www.pippolabs.xyz/",
-      linkText: "Visit site",
-    },
-    {
       title: "CoachAI",
       description: "An agentic AI fitness companion that builds personalized programs and provides real-time coaching.",
       url: "https://www.coachaiapp.info",

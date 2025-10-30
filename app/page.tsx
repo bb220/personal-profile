@@ -16,7 +16,11 @@ export default function Home() {
       </div>
       <p className="lead dropcap">
         Hello. I'm a product manager and software engineer. I'm interested in finding new and improved ways of doing
-        things and building businesses around them. This site hosts my blog posts and projects. Say hello on{" "}
+        things and building businesses around them. Currently, I'm building{" "}
+        <Link href="https://www.pippolabs.xyz/" target="_blank" rel="noopener">
+          Pippo Labs
+        </Link>
+        . This site hosts my blog posts and projects. Say hello on{" "}
         {socialLinks.map((link, i) => (
           <span key={link.name}>
             <Link href={link.url} target="_blank" rel="noopener">
@@ -52,11 +56,11 @@ export default function Home() {
 
         <div className="project">
           <div className="rule">
-            <Link href="https://www.pippolabs.xyz/" target="_blank" rel="noopener" className="title-link">
-              <span className="head">Pippo Labs</span>
+            <Link href="https://www.coachaiapp.info" target="_blank" rel="noopener" className="title-link">
+              <span className="head">CoachAI</span>
             </Link>
           </div>
-          <p>A technology studio that experiments with emerging ideas and brings new software products to market.</p>
+          <p>An agentic AI fitness companion that builds personalized programs and provides real-time coaching.</p>
         </div>
         <div style={{ textAlign: "center", marginTop: "0.75rem" }}>
           <Link href="/projects" className="more-link">
