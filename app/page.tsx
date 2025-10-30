@@ -15,7 +15,7 @@ export default function Home() {
         <div className="chapter">A Note from the Author</div>
       </div>
       <p className="lead dropcap">
-        Hello. I'm a product manager and software engineer. I'm interested in finding new and improved ways of doing things and building businesses. This site hosts my blog posts and projects. Say hello on{" "}
+        Hello. I'm a product manager and software engineer. I'm interested in finding new and improved ways of doing things and building businesses around them. This site hosts my blog posts and projects. Say hello on{" "}
         {socialLinks.map((link, i) => (
           <span key={link.name}>
             <Link href={link.url} target="_blank" rel="noopener">
