@@ -13,13 +13,13 @@ export default function PostsPage() {
     {
       slug: "hitchhikers-guide-agent-evals",
       title: "The Hitchhiker's Guide to Agent Evals",
-      description: "A practical introduction to agent applications and evaluations.",
+      description: "A practical introduction to agent applications and evaluations",
       date: "October 24, 2025",
     },
     {
       slug: "what-is-an-api",
       title: "What is an API?",
-      description: "The familiar concept at the center of our software-powered world.",
+      description: "The familiar concept at the center of our software-powered world",
       date: "January 04, 2022",
     },
   ]
@@ -28,7 +28,7 @@ export default function PostsPage() {
     <main className="main">
       <div className="center">
         <div className="roman">III</div>
-        <div className="chapter">Posts</div>
+        <div className="chapter">Writing</div>
       </div>
       {posts.map((post) => (
         <div key={post.slug} className="project">

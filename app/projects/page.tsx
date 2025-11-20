@@ -11,32 +11,38 @@ export default function ProjectsPage() {
   const projects = [
     {
       title: "CoachAI",
-      description: "An agentic AI fitness companion that builds personalized programs and provides real-time coaching.",
+      description: "An agentic AI fitness companion that builds personalized programs and provides real-time coaching",
       url: "https://www.coachaiapp.info",
       linkText: "Check it out",
     },
     {
+      title: "Interactive Hierarchy",
+      description: "An interactive visual illustrating Paul Graham's disagreement hierarchy, with customizable AI-generated examples",
+      url: "https://interactive-hierarchy.brandonbellero.com/",
+      linkText: "Explore the project",
+    },
+    {
       title: "DinnerPlanner",
       description:
-        "An AI-powered meal planning agent that suggests recipes, scales portions, and generates shopping lists tailored to your preferences and dietary needs.",
+        "An AI-powered meal planning agent that suggests recipes, scales portions, and generates shopping lists tailored to your preferences and dietary needs",
       url: "https://x.com/brandonbellero/status/1928992668266410112",
       linkText: "Explore the project",
     },
     {
       title: "My Easy Golf Scorecard",
-      description: "A simple scorecard app that eliminates distractions so you can enjoy your round.",
+      description: "A simple scorecard app that eliminates distractions so you can enjoy your round",
       url: "https://myeasygolfscorecard.com",
       linkText: "See the app",
     },
     {
       title: "The Verrazzano Is Cool Too",
-      description: "A design‑led, automated DTC apparel project inspired by New York City's most underrated bridge.",
+      description: "A design‑led, automated DTC apparel project inspired by New York City's most underrated bridge",
       url: "https://www.theverrazzanoiscooltoo.com",
       linkText: "Browse the shop",
     },
     {
       title: "Clean Calculator",
-      description: "A minimal calculator extension for Chrome.",
+      description: "A minimal calculator extension for Chrome",
       url: "https://chromewebstore.google.com/detail/clean-calculator-extensio/bmhlkhlncmgcdeicfehhpifjhgneenoc",
       linkText: "Learn more",
     },

@@ -15,12 +15,13 @@ export default function Home() {
         <div className="chapter">A Note from the Author</div>
       </div>
       <p className="lead dropcap">
-        Hello. I'm a product manager and software engineer. I'm interested in finding new and improved ways of doing
-        things and building businesses around them. Currently, I'm building{" "}
+        Welcome to my website. I'm a product manager and software engineer interested in finding new and improved ways
+        of doing things. Here you will find a collection of my writing and projects. Currently, I'm building{" "}
         <Link href="https://www.pippolabs.xyz/" target="_blank" rel="noopener">
           Pippo Labs
-        </Link>
-        . Say hello on{" "}
+        </Link>{" "}
+        and exploring AI applications across multiple verticals. <br />
+        <br /> Say hello on{" "}
         {socialLinks.map((link, i) => (
           <span key={link.name}>
             <Link href={link.url} target="_blank" rel="noopener">
@@ -46,11 +47,11 @@ export default function Home() {
             </Link>
           </div>
           <div className="post-meta">October 24, 2025</div>
-          <p>A practical introduction to agent applications and evaluations.</p>
+          <p>A practical introduction to agent applications and evaluations</p>
         </div>
-        <div style={{ textAlign: "center", marginTop: "0.75rem" }}>
+        <div style={{ textAlign: "left", marginTop: "0.75rem" }}>
           <Link href="/posts" className="more-link">
-            All posts
+            More writing
           </Link>
         </div>
 
@@ -60,11 +61,11 @@ export default function Home() {
               <span className="head">CoachAI</span>
             </Link>
           </div>
-          <p>An agentic AI fitness companion that builds personalized programs and provides real-time coaching.</p>
+          <p>An agentic AI fitness companion that builds personalized programs and provides real-time coaching</p>
         </div>
-        <div style={{ textAlign: "center", marginTop: "0.75rem" }}>
+        <div style={{ textAlign: "left", marginTop: "0.75rem" }}>
           <Link href="/projects" className="more-link">
-            All projects
+            More projects
           </Link>
         </div>
       </section>

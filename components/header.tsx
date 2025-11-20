@@ -40,7 +40,7 @@ export function Header() {
               <li>
                 <Link href="/posts" onClick={closeMenu}>
                   <span className="menu-roman">III</span>
-                  <span className="menu-section">Posts</span>
+                  <span className="menu-section">Writing</span>
                 </Link>
               </li>
               <li>
