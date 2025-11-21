@@ -10,9 +10,9 @@ export default function ProjectsPage() {
 
   const projects = [
     {
-      title: "CoachAI",
-      description: "An agentic AI fitness companion that builds personalized programs and provides real-time coaching",
-      url: "https://www.coachaiapp.info",
+      title: "trainr",
+      description: "An agentic AI fitness companion",
+      url: "https://www.trainrfit.com",
       linkText: "Check it out",
     },
     {

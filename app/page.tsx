@@ -57,11 +57,11 @@ export default function Home() {
 
         <div className="project">
           <div className="rule">
-            <Link href="https://www.coachaiapp.info" target="_blank" rel="noopener" className="title-link">
-              <span className="head">CoachAI</span>
+            <Link href="https://www.trainrfit.com" target="_blank" rel="noopener" className="title-link">
+              <span className="head">trainr</span>
             </Link>
           </div>
-          <p>An agentic AI fitness companion that builds personalized programs and provides real-time coaching</p>
+          <p>An agentic AI fitness companion</p>
         </div>
         <div style={{ textAlign: "left", marginTop: "0.75rem" }}>
           <Link href="/projects" className="more-link">
