@@ -15,12 +15,11 @@ export default function Home() {
         <div className="chapter">A Note from the Author</div>
       </div>
       <p className="lead dropcap">
-        Welcome to my website. I'm a product manager and software engineer interested in finding new and improved ways
-        of doing things. Here you will find a collection of my writing and projects. Currently, I'm building{" "}
+        Welcome to my website. I'm a product manager interested in finding new and improved ways of doing things and building businesses around them. Here you will find a collection of my writing and projects. Currently, I'm building{" "}
         <Link href="https://www.pippolabs.xyz/" target="_blank" rel="noopener">
           Pippo Labs
         </Link>{" "}
-        and exploring AI applications across multiple verticals. <br />
+        and exploring AI applications. <br />
         <br /> Say hello on{" "}
         {socialLinks.map((link, i) => (
           <span key={link.name}>
