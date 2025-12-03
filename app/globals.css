@@ -51,6 +51,31 @@ body {
   opacity: 0.7;
 }
 
+/* Adding styles for header social links */
+.header-social-links {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  font-size: 0.9rem;
+}
+
+.header-social-link {
+  color: var(--accent);
+  border-bottom: 1px solid color-mix(in srgb, var(--accent) 60%, transparent);
+  font-family: "Merriweather", serif;
+  font-weight: 400;
+}
+
+.header-social-link:hover {
+  border-bottom-color: var(--accent);
+}
+
+.header-social-separator {
+  color: var(--accent);
+  opacity: 0.5;
+  margin: 0 0.35rem;
+}
+
 .menu-button {
   background: none;
   border: none;
