@@ -14,7 +14,10 @@ export default function Home() {
         <div className="roman">I</div>
         <div className="chapter">A Note from the Author</div>
       </div>
-      <p className="dropcap">Welcome to my website, where I publish my projects and writing.</p>
+      <p className="dropcap">
+        Welcome to my website, where I publish my <Link href="/projects">projects</Link> and{" "}
+        <Link href="/posts">writing</Link>.
+      </p>
       <p>I build software and software-powered businesses and enjoy sharing my work and learnings along the way.</p>
       <p>
         Currently, I'm building AI applications and{" "}
@@ -39,11 +42,6 @@ export default function Home() {
           </div>
           <p>Agentic AI fitness companion</p>
         </div>
-        <div style={{ textAlign: "center", marginTop: "0.75rem" }}>
-          <Link href="/projects" className="more-link">
-            View all projects
-          </Link>
-        </div>
 
         <div className="project">
           <div className="rule">
@@ -53,11 +51,6 @@ export default function Home() {
           </div>
           <div className="post-meta">October 24, 2025</div>
           <p>Practical introduction to agent applications and evaluations</p>
-        </div>
-        <div style={{ textAlign: "center", marginTop: "0.75rem" }}>
-          <Link href="/posts" className="more-link">
-            View all writing
-          </Link>
         </div>
       </section>
     </main>
