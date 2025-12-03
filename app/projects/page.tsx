@@ -52,7 +52,7 @@ export default function ProjectsPage() {
   return (
     <main className="main">
       <div className="center">
-        <div className="roman">III</div>
+        <div className="roman">II</div>
         <div className="chapter">Projects</div>
       </div>
 

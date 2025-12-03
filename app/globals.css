@@ -178,7 +178,8 @@ body {
 .main {
   max-width: var(--max);
   width: 100%;
-  padding-top: 2vh;
+  /* Increased padding-top for more spacing between header and content */
+  padding-top: 6vh;
 }
 
 .center {

@@ -26,33 +26,6 @@ export default function Home() {
         </Link>
         {". "}
       </p>
-
-      {/* II. Featured */}
-      <section id="featured">
-        <div className="center">
-          <div className="roman">II</div>
-          <div className="chapter">Featured</div>
-        </div>
-
-        <div className="project">
-          <div className="rule">
-            <Link href="https://www.trainrfit.com" target="_blank" rel="noopener" className="title-link">
-              <span className="head">Trainr</span>
-            </Link>
-          </div>
-          <p>Agentic AI fitness companion</p>
-        </div>
-
-        <div className="project">
-          <div className="rule">
-            <Link href="/posts/hitchhikers-guide-agent-evals" className="title-link">
-              <span className="head">The Hitchhiker's Guide to Agent Evals</span>
-            </Link>
-          </div>
-          <div className="post-meta">October 24, 2025</div>
-          <p>Practical introduction to agent applications and evaluations</p>
-        </div>
-      </section>
     </main>
   )
 }
