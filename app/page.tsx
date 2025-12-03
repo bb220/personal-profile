@@ -50,9 +50,9 @@ export default function Home() {
           </div>
           <p>Agentic AI fitness companion</p>
         </div>
-        <div style={{ textAlign: "left", marginTop: "0.75rem" }}>
+        <div style={{ textAlign: "center", marginTop: "0.75rem" }}>
           <Link href="/projects" className="more-link">
-            More projects
+            View all projects
           </Link>
         </div>
 
@@ -65,9 +65,9 @@ export default function Home() {
           <div className="post-meta">October 24, 2025</div>
           <p>Practical introduction to agent applications and evaluations</p>
         </div>
-        <div style={{ textAlign: "left", marginTop: "0.75rem" }}>
+        <div style={{ textAlign: "center", marginTop: "0.75rem" }}>
           <Link href="/posts" className="more-link">
-            More writing
+            View all writing
           </Link>
         </div>
       </section>
