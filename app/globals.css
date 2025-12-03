@@ -56,22 +56,22 @@ body {
   display: flex;
   align-items: center;
   gap: 0;
-  font-size: 0.9rem;
+  font-size: 1rem; /* UPDATED from 0.9rem */
 }
 
 .header-social-link {
-  color: var(--accent);
-  border-bottom: 1px solid color-mix(in srgb, var(--accent) 60%, transparent);
-  font-family: "Merriweather", serif;
+  color: var(--ink);
+  border-bottom: 1px solid color-mix(in srgb, var(--ink) 60%, transparent);
+  font-family: "EB Garamond", ui-serif, Georgia, serif;
   font-weight: 400;
 }
 
 .header-social-link:hover {
-  border-bottom-color: var(--accent);
+  border-bottom-color: var(--ink);
 }
 
 .header-social-separator {
-  color: var(--accent);
+  color: var(--ink);
   opacity: 0.5;
   margin: 0 0.35rem;
 }
@@ -214,12 +214,17 @@ p {
   text-align: left;
   margin: 0;
   text-indent: 0;
+  /* Add bottom margin to all paragraphs for consistent spacing */
+  margin-bottom: 1.25rem;
+}
+
+p:last-of-type {
+  margin-bottom: 0;
 }
 
 p.lead {
   font-size: 1.05em;
-  /* Add natural paragraph spacing for lead paragraphs */
-  margin-bottom: 1.25rem;
+  /* Removed margin-bottom since it's now on all p elements */
 }
 
 p.lead:last-of-type {
@@ -227,19 +232,21 @@ p.lead:last-of-type {
 }
 
 a {
-  color: var(--accent);
+  color: var(--ink);
   text-decoration: none;
-  border-bottom: 1px solid color-mix(in srgb, var(--accent) 60%, transparent);
+  border-bottom: 1px solid color-mix(in srgb, var(--ink) 60%, transparent);
+  font-family: "EB Garamond", ui-serif, Georgia, serif;
 }
 
 a:hover {
-  border-bottom-color: var(--accent);
+  border-bottom-color: var(--ink);
 }
 
 /* Title links for projects and writing */
 a.title-link {
   color: var(--ink);
   border-bottom: 1px solid color-mix(in srgb, var(--ink) 60%, transparent);
+  font-family: "EB Garamond", ui-serif, Georgia, serif;
 }
 
 a.title-link:hover {
@@ -257,13 +264,14 @@ a.title-link:hover {
 
 /* Added styling for "More posts" link */
 .more-link {
-  font-size: 0.95rem;
-  color: var(--accent);
-  border-bottom: 1px solid color-mix(in srgb, var(--accent) 60%, transparent);
+  font-size: 1rem; /* Updated font-size to match body text (22px) */
+  color: var(--ink);
+  border-bottom: 1px solid color-mix(in srgb, var(--ink) 60%, transparent);
+  font-family: "EB Garamond", ui-serif, Georgia, serif;
 }
 
 .more-link:hover {
-  border-bottom-color: var(--accent);
+  border-bottom-color: var(--ink);
 }
 
 hr {
@@ -303,13 +311,14 @@ hr {
 
 .back-link {
   display: inline-block;
-  color: var(--accent);
-  font-size: 0.95rem;
-  border-bottom: 1px solid color-mix(in srgb, var(--accent) 60%, transparent);
+  color: var(--ink);
+  font-size: 1rem; /* UPDATED from 0.95rem */
+  border-bottom: 1px solid color-mix(in srgb, var(--ink) 60%, transparent);
+  font-family: "EB Garamond", ui-serif, Georgia, serif;
 }
 
 .back-link:hover {
-  border-bottom-color: var(--accent);
+  border-bottom-color: var(--ink);
 }
 
 /* Post metadata */
@@ -501,12 +510,13 @@ hr {
 
 /* Links in posts */
 .post-body a {
-  color: var(--accent);
-  border-bottom: 1px solid color-mix(in srgb, var(--accent) 60%, transparent);
+  color: var(--ink);
+  border-bottom: 1px solid color-mix(in srgb, var(--ink) 60%, transparent);
+  font-family: "EB Garamond", ui-serif, Georgia, serif;
 }
 
 .post-body a:hover {
-  border-bottom-color: var(--accent);
+  border-bottom-color: var(--ink);
 }
 
 /* Mobile responsive */

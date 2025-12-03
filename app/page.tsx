@@ -14,11 +14,9 @@ export default function Home() {
         <div className="roman">I</div>
         <div className="chapter">A Note from the Author</div>
       </div>
-      <p className="lead dropcap">Welcome to my website, where I publish my projects and writing.</p>
-      <p className="lead">
-        I build software and software-powered businesses and enjoy sharing my work and learnings along the way.
-      </p>
-      <p className="lead">
+      <p className="dropcap">Welcome to my website, where I publish my projects and writing.</p>
+      <p>I build software and software-powered businesses and enjoy sharing my work and learnings along the way.</p>
+      <p>
         Currently, I'm building AI applications and{" "}
         <Link href="https://www.pippolabs.xyz/" target="_blank" rel="noopener">
           Pippo Labs
