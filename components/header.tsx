@@ -38,15 +38,15 @@ export function Header() {
             </button>
             <ul className="menu-list">
               <li>
-                <Link href="/posts" onClick={closeMenu}>
+                <Link href="/projects" onClick={closeMenu}>
                   <span className="menu-roman">III</span>
-                  <span className="menu-section">Writing</span>
+                  <span className="menu-section">Projects</span>
                 </Link>
               </li>
               <li>
-                <Link href="/projects" onClick={closeMenu}>
+                <Link href="/posts" onClick={closeMenu}>
                   <span className="menu-roman">IV</span>
-                  <span className="menu-section">Projects</span>
+                  <span className="menu-section">Writing</span>
                 </Link>
               </li>
             </ul>

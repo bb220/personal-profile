@@ -2,9 +2,9 @@ import Link from "next/link"
 
 export default function Home() {
   const socialLinks = [
-    { name: "LinkedIn", url: "https://www.linkedin.com/in/brandon-bellero/" },
     { name: "X", url: "https://x.com/brandonbellero" },
     { name: "GitHub", url: "https://github.com/bb220" },
+    { name: "LinkedIn", url: "https://www.linkedin.com/in/brandon-bellero/" },
   ]
 
   return (
@@ -15,12 +15,15 @@ export default function Home() {
         <div className="chapter">A Note from the Author</div>
       </div>
       <p className="lead dropcap">
-        Welcome to my website. I'm a product manager interested in finding new and improved ways of doing things and building businesses around them. Here you will find a collection of my writing and projects. Currently, I'm building{" "}
+        Welcome to my website, where I publish my projects and writing.
+        <br />
+        <br />I build software and software-powered businesses and enjoy sharing my work and learnings along the way.
+        <br />
+        <br /> Currently, I'm building AI applications and{" "}
         <Link href="https://www.pippolabs.xyz/" target="_blank" rel="noopener">
           Pippo Labs
-        </Link>{" "}
-        and exploring AI applications. <br />
-        <br /> Say hello on{" "}
+        </Link>
+        {". "}Say hello on{" "}
         {socialLinks.map((link, i) => (
           <span key={link.name}>
             <Link href={link.url} target="_blank" rel="noopener">
@@ -41,38 +44,33 @@ export default function Home() {
 
         <div className="project">
           <div className="rule">
-            <Link href="/posts/hitchhikers-guide-agent-evals" className="title-link">
-              <span className="head">The Hitchhiker's Guide to Agent Evals</span>
-            </Link>
-          </div>
-          <div className="post-meta">October 24, 2025</div>
-          <p>A practical introduction to agent applications and evaluations</p>
-        </div>
-        <div style={{ textAlign: "left", marginTop: "0.75rem" }}>
-          <Link href="/posts" className="more-link">
-            More writing
-          </Link>
-        </div>
-
-        <div className="project">
-          <div className="rule">
             <Link href="https://www.trainrfit.com" target="_blank" rel="noopener" className="title-link">
-              <span className="head">trainr</span>
+              <span className="head">Trainr</span>
             </Link>
           </div>
-          <p>An agentic AI fitness companion</p>
+          <p>Agentic AI fitness companion</p>
         </div>
         <div style={{ textAlign: "left", marginTop: "0.75rem" }}>
           <Link href="/projects" className="more-link">
             More projects
           </Link>
         </div>
-      </section>
 
-      <hr />
-      <p className="center" style={{ opacity: 0.7, textIndent: 0, marginTop: "1.25rem", marginBottom: "3rem" }}>
-        © {new Date().getFullYear()} Brandon Bellero
-      </p>
+        <div className="project">
+          <div className="rule">
+            <Link href="/posts/hitchhikers-guide-agent-evals" className="title-link">
+              <span className="head">The Hitchhiker's Guide to Agent Evals</span>
+            </Link>
+          </div>
+          <div className="post-meta">October 24, 2025</div>
+          <p>Practical introduction to agent applications and evaluations</p>
+        </div>
+        <div style={{ textAlign: "left", marginTop: "0.75rem" }}>
+          <Link href="/posts" className="more-link">
+            More writing
+          </Link>
+        </div>
+      </section>
     </main>
   )
 }
