@@ -193,6 +193,12 @@ p {
 
 p.lead {
   font-size: 1.05em;
+  /* Add natural paragraph spacing for lead paragraphs */
+  margin-bottom: 1.25rem;
+}
+
+p.lead:last-of-type {
+  margin-bottom: 0;
 }
 
 a {
