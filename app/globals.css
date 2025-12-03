@@ -303,6 +303,15 @@ hr {
   font-style: italic;
 }
 
+/* Added style for About Me header */
+.about-me-header {
+  font-family: "Merriweather", serif;
+  font-weight: 700;
+  font-size: 1.15rem;
+  margin: 2.25rem 0 0.6rem;
+  text-align: left;
+}
+
 /* Blog Post Styles */
 
 /* Post header with back link */

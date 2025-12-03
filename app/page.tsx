@@ -16,9 +16,10 @@ export default function Home() {
       </div>
       <p className="dropcap">
         Welcome to my website, where I publish my <Link href="/projects">projects</Link> and{" "}
-        <Link href="/posts">writing</Link>.
+        <Link href="/posts">writing</Link>. The internet is a big place, so I appreciate you choosing to spend a moment here.
       </p>
-      <p>I build software and software-powered businesses and enjoy sharing my work and learnings along the way.</p>
+      <h2 className="about-me-header">About Me</h2>
+      <p>I build software and software-powered businesses. Along the way, I like to share my work and learnings.</p>
       <p>
         Currently, I'm building AI applications and{" "}
         <Link href="https://www.pippolabs.xyz/" target="_blank" rel="noopener">
