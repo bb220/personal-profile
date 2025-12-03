@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react"
 import { getPostBySlug, formatDate, type Post } from "@/lib/posts"
+import Link from "next/link"
 
 export default function PostPageClient({
   params,
@@ -77,6 +78,12 @@ export default function PostPageClient({
         {/* Post content */}
         <div className="post-body" dangerouslySetInnerHTML={{ __html: post.content }} />
       </article>
+
+      <div style={{ marginTop: "3rem", marginBottom: "2rem" }}>
+        <Link href="/posts" className="back-link">
+          All posts
+        </Link>
+      </div>
 
       <hr />
       <p className="center" style={{ opacity: 0.7, textIndent: 0, marginTop: "1.25rem", marginBottom: "3rem" }}>
