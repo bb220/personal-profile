@@ -305,9 +305,12 @@ hr {
 
 /* Added style for About Me header */
 .about-me-header {
-  font-family: "Merriweather", serif;
-  font-weight: 700;
-  font-size: 1.15rem;
+  font-family: "EB Garamond", ui-serif, Georgia, serif;
+  font-weight: 400;
+  /* Updated font-size to match body text (22px) */
+  font-size: 22px;
+  /* Added italic style */
+  font-style: italic;
   margin: 2.25rem 0 0.6rem;
   text-align: left;
 }
